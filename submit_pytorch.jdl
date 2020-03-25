@@ -1,12 +1,12 @@
 # Invoke Singularity
 #
 universe   = vanilla
-executable = tf_matmul.sh
+executable = pytorch_matmul.sh
 
 should_transfer_files = Yes
 when_to_transfer_output = ON_EXIT
 
-transfer_input_files = tf_matmul.py
+transfer_input_files = pytorch_matmul.py
 
 Log    = logs/$(Cluster).log
 Output = logs/$(Cluster)-$(Process).out
@@ -25,7 +25,7 @@ Error  = logs/$(Cluster)-$(Process).err
 #+SingularityImage = "docker://tensorflow/tensorflow:latest-gpu"
 ## Getting one from nova instead:
 #+SingularityImage = "/cvmfs/singularity.opensciencegrid.org/novaexperiment/el7-tensorflow-gpu:latest"
-## Notre dame images
+## Notre Dame Images
 +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/notredamedulac/el7-tensorflow-pytorch:latest"
 
 request_gpus   = 1

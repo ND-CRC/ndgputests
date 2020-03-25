@@ -29,8 +29,8 @@ if command -v nvidia-smi; then
 fi
 
 echo 
-echo "- Executing python TensorFlow matrix multiplication example"
-python tf_matmul.py 2>&1
+echo "- Executing python torch matrix multiplication example"
+python pytorch_matmul.py 2>&1
 
 #echo
 #echo ------ ENVIRONMENT ----
