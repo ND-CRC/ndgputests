@@ -4,10 +4,6 @@ date
 hostname
 printf "User:" ; whoami
 pwd
-echo "ls -ld .*"
-ls -ld .*
-echo find .
-find .
 
 echo
 echo "- OS Release:"
@@ -18,6 +14,7 @@ elif [ -f /etc/issue ]; then
 else
   echo "OS not known"
 fi
+
 echo
 echo "- Do we have cvmfs mounted inside the container?"
 echo "ls -ld /cvmfs/cms.cern.ch"
@@ -31,6 +28,8 @@ fi
 echo 
 echo "- Executing python torch matrix multiplication example"
 python pytorch_matmul.py 2>&1
+# use python3 instead
+# python3 pytorch_matmul.py 2>&1
 
 #echo
 #echo ------ ENVIRONMENT ----
