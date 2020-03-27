@@ -13,18 +13,6 @@ Output = logs/$(Cluster)-$(Process).out
 Error  = logs/$(Cluster)-$(Process).err
 
 # Enable Singularity feature
-#+SingularityImage = "/cvmfs/cernvm-prod.cern.ch/cvm3"
-#+SingularityImage = "/cvmfs/singularity.opensciencegrid.org/bbockelm/cms:rhel6"
-
-# TensorFlow image
-## OSG image does not work with singularity --nv option 
-## So this might only work with the singularity wrappers in OSG Factories. To investigate
-# +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow-gpu:latest"
-## Official TensorFlow image in docker does work though:
-## But docker does not seem to work
-#+SingularityImage = "docker://tensorflow/tensorflow:latest-gpu"
-## Getting one from nova instead:
-#+SingularityImage = "/cvmfs/singularity.opensciencegrid.org/novaexperiment/el7-tensorflow-gpu:latest"
 ## Notre Dame Images
 +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/notredamedulac/el7-tensorflow-pytorch:latest"
 
