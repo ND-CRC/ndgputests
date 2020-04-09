@@ -15,6 +15,7 @@ is built from: https://github.com/NDCMS/el7-tensorflow-gpu
 Once you log in into camlnd.crc.nd.edu, type: 
 
 ```
+cd /scratch365/$USER
 git clone https://github.com/khurtado/ndgputests
 cd ndgputests
 ```
