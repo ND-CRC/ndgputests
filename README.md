@@ -1,14 +1,26 @@
 # CAML-ND GPU Tests
 
-Requires defining singularity images on PATHs. E.g.: Via cvmfs.
 
-Notre Dame image in CVMFS
+In order to use CAML resources, we require defining singularity images on PATHs. E.g.: Via cvmfs.
+
+The following Notre Dame image (available via CVMFS) supports TensorFlow, Keras and PyTorch:
+
 ```
 /cvmfs/singularity.opensciencegrid.org/notredamedulac/el7-tensorflow-pytorch:latest
 ```
 is built from: https://github.com/NDCMS/el7-tensorflow-gpu
 
-## Tensorflow example
+## Setting up this tutorial examples
+
+Once you log in into camlnd.crc.nd.edu, type: 
+
+```
+git clone https://github.com/khurtado/ndgputests
+cd ndgputests
+```
+Then, follow one or both of the examples below.
+
+### Tensorflow example
 
 ```
 $ condor_submit submit_tensorflow.jdl
@@ -33,7 +45,7 @@ Output example:
   ===============================
  ```
 
-## Pytorch example
+### Pytorch example
 
 ```
 $ condor_submit submit_pytorch.jdl
