@@ -14,7 +14,7 @@ Error  = logs/$(Cluster)-$(Process).err
 
 # Enable Singularity feature
 ## Notre Dame Images
-+SingularityImage = "/cvmfs/singularity.opensciencegrid.org/notredamedulac/el7-tensorflow-pytorch:latest"
++SingularityImage = "/cvmfs/singularity.opensciencegrid.org/notredamedulac/el7-pytorch-gpu:latest"
 
 request_gpus   = 1
 request_memory = 1 Gb
