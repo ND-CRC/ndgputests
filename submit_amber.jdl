@@ -1,0 +1,20 @@
+universe   = vanilla
+executable = amber.sh
+
+should_transfer_files = Yes
+when_to_transfer_output = ON_EXIT
+
+Log    = logs/$(Cluster).log
+Output = logs/$(Cluster)-$(Process).out
+Error  = logs/$(Cluster)-$(Process).err
+
+# Amber Image on AFS
++SingularityImage = "/afs/crc.nd.edu/x86_64_linux/s/singularity/images/amber18.sif"
+# Amber image on CVMFS
+#+SingularityImage = "cvmfs/singularity.opensciencegrid.org/notredamedulac/amber:latest"
+
+request_gpus   = 1
+request_memory = 1 Gb
+request_cpus   = 1
+
+Queue 1
