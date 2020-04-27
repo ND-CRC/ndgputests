@@ -1,7 +1,7 @@
 universe   = vanilla
 executable = amber.sh
 
-should_transfer_files = Yes
+should_transfer_files = IF_NEEDED
 when_to_transfer_output = ON_EXIT
 
 Log    = logs/$(Cluster).log

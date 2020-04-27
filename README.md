@@ -67,3 +67,13 @@ Output example:
   tensor([[ 1.0000e+00,  0.0000e+00],
           [-4.7684e-07,  1.0000e+00]], device='cuda:0')
  ```
+
+## Amber example:
+
+```
+$ condor_submit submit_amber.jdl
+```
+Output example:
+```
+
+```

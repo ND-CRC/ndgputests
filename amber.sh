@@ -1,9 +1,10 @@
 #! /bin/bash
 
-### Debugging
+### Output for Debugging
 date
 hostname
 printf "User:" ; whoami
+echo "- Initial directory:"
 pwd
 
 echo
@@ -22,10 +23,10 @@ if command -v nvidia-smi; then
 fi
 
 ### end of Debugging
-
-# Executing Amber
+echo "- Entering scratch365 submit directory"
+cd $_CONDOR_JOB_IWD
 echo "- Executing pmemd.cuda"
-pmemd.cuda -O -i inputs_amber/mdin.GPU -o mdout -p inputs_amber/prmtop -c inputs_amber/inpcrd
+pmemd.cuda -O -i amber_inputs/mdin.GPU -o mdout -p amber_inputs/prmtop -c amber_inputs/inpcrd
 exitcode=$?
 
 if [ "x$exitcode" != "x0" ]; then
@@ -34,5 +35,5 @@ else
     echo "- Amber job is completed."
 fi
 echo "- Exit code: $exitcode"
-
+env
 exit $exitcode
