@@ -35,5 +35,4 @@ else
     echo "- Amber job is completed."
 fi
 echo "- Exit code: $exitcode"
-env
 exit $exitcode

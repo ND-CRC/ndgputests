@@ -75,5 +75,21 @@ $ condor_submit submit_amber.jdl
 ```
 Output example:
 ```
+- Entering scratch365 submit directory
+- Executing pmemd.cuda
+- Amber job is completed.
+- Exit code: 0
 
+# From mdout
+|------------------- GPU DEVICE INFO --------------------
+|
+|            CUDA_VISIBLE_DEVICES: 0
+|   CUDA Capable Devices Detected:      1
+|           CUDA Device ID in use:      0
+|                CUDA Device Name: Quadro RTX 6000
+|     CUDA Device Global Mem Size:  22698 MB
+| CUDA Device Num Multiprocessors:     72
+|           CUDA Device Core Freq:   1.62 GHz
+|
+|--------------------------------------------------------
 ```
