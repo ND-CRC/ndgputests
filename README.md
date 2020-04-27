@@ -1,5 +1,6 @@
 # CAML-ND GPU Tests
 
+## Condor Submission
 
 In order to use CAML resources, we require defining singularity images on PATHs. E.g.: Via cvmfs.
 
@@ -93,3 +94,39 @@ Output example:
 |
 |--------------------------------------------------------
 ```
+
+## Jupyterhub service
+(This is still experimental and has no technical support)
+
+### Pre-requisites
+Users need to run the university VPN in order to access this service. Please, refer to OIT documentation for more information regarding using the campus VPN: https://oit.nd.edu/services/network/  
+
+### Instructions
+After you get an account in camlnd.crc.nd.edu, you can click on the URL below in order to user Jupyterhub with CAML resources.
+This will start jupyter notebooks inside the GPU nodes for a specific amount of time. At present, access to your AFS Home area is allowed in read-only mode, use /scratch365/$USER to write files.
+
+https://camlnd.virtual.crc.nd.edu:9800/
+
+1. Use your campus credentials to log in.
+
+<p align="center"><img src="images/jupyterhub-login.png" width="400"></p>
+
+2. Then, set the following parameters (note more demanding parameters may take longer to be scheduled, so please try to estimate the resources and time needed for your work as best as possible):
+
+- GPUs: Number of GPUs for your application, up to 4. Default: 1
+- CPUs: Number of CPUs. Default: 1
+- Memory: Requested Memory (GB) 
+- Runtime: Maximum wall clock time (in minutes) allowed for your notebook to run. Max: 24 hours, Default:2 hours. 
+- Container: This will be the software environment needed for your application. Please, ask the CRC for help if you need an environment not listed here.
+
+<p align="center"><img src="images/jupyterhub-spawner.png" width="700"></p>
+
+3. Finally, you can either run python notebooks or work directly in the terminal. You can try the [pytorch notebook example](jupyter_notebooks/Pytorch.ipynb) with the pytorch container. Note your starting directory will be located on /scratch365/$USER.
+
+<p align="center"><img src="images/jupyterhub-notebook.png" width="600"></p>
+
+
+Please, refer to the [jupyter-notebook documentation](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Notebook%20Basics.html) for more information.
+
+Curated containers: Pytorch
+In development: Tensorflow/Keras, Amber
