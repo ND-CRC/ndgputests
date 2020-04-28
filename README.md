@@ -105,7 +105,7 @@ Users need to run the university VPN in order to access this service. Please, re
 After you get an account in camlnd.crc.nd.edu, you can click on the URL below in order to user Jupyterhub with CAML resources.
 This will start jupyter notebooks inside the GPU nodes for a specific amount of time. At present, access to your AFS Home area is allowed in read-only mode, use /scratch365/$USER to write files.
 
-https://camlnd.virtual.crc.nd.edu:9800/
+https://camlnd.crc.nd.edu:9800/
 
 1. Use your campus credentials to log in.
 
