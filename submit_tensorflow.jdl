@@ -18,7 +18,7 @@ Error  = logs/$(Cluster)-$(Process).err
 ## NOVA image:
 #+SingularityImage = "/cvmfs/singularity.opensciencegrid.org/novaexperiment/el7-tensorflow-gpu:latest"
 ## Notre dame images
-+SingularityImage = "/cvmfs/singularity.opensciencegrid.org/notredamedulac/el7-tensorflow-pytorch:latest"
++SingularityImage = "/cvmfs/singularity.opensciencegrid.org/notredamedulac/notredamedulac/el7-tensorflow-keras-gpu:latest"
 
 request_gpus   = 1
 request_memory = 1 Gb
