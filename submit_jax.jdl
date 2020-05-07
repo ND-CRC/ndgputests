@@ -1,0 +1,27 @@
+# Invoke Singularity
+#
+universe   = vanilla
+executable = jax_matmul.sh
+
+should_transfer_files = Yes
+when_to_transfer_output = ON_EXIT
+
+transfer_input_files = jax_matmul.py
+
+Log    = logs/$(Cluster).log
+Output = logs/$(Cluster)-$(Process).out
+Error  = logs/$(Cluster)-$(Process).err
+
+# Enable Singularity feature
+# OSG TensorFlow image
+# +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow-gpu:latest"
+## NOVA image:
+#+SingularityImage = "/cvmfs/singularity.opensciencegrid.org/novaexperiment/el7-tensorflow-gpu:latest"
+## Notre dame images
++SingularityImage = "/cvmfs/singularity.opensciencegrid.org/notredamedulac/el7-jax-gpu:latest"
+
+request_gpus   = 1
+request_memory = 1 Gb
+request_cpus   = 1
+
+Queue 1
