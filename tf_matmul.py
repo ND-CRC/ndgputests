@@ -1,4 +1,4 @@
-#! /bin/env python
+#! /bin/env python3
 # simple example to show the matrix multiplication with tensorflow
 
 import tensorflow as tf
