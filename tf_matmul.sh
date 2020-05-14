@@ -30,7 +30,7 @@ fi
 
 echo 
 echo "- Executing python TensorFlow matrix multiplication example"
-python tf_matmul.py 2>&1
+python3 tf_matmul.py 2>&1
 
 exitcode=$?
 exit $exitcode
