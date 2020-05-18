@@ -139,6 +139,37 @@ result of matrix multiplication
   3033.4866  ]] ] ] ] ] ]] ] ] ] ] ]]
 ````
 
+## DeepSphere example:
+```
+$ condor_submit submit_deepsphere.jdl
+```
+
+Part of output example:
+```
+2020-05-18 14:09:22.118759: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1325] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 21400 MB memory) -> physical GPU (device: 0, name: Quadro RTX 6000, pci bus id: 0000:2f:00.0, compute capability: 7.5)
+[name: "/device:CPU:0"
+device_type: "CPU"
+memory_limit: 268435456
+locality {
+}
+step 75 / 112 (epoch 8.00 / 12):
+  learning_rate = 1.00e-01, training loss = 3.12e-03
+  validation accuracy: 100.00 (50 / 50), f1 (weighted): 100.00, loss: 1.38e+00
+  CPU time: 10s, wall time: 11s
+step 90 / 112 (epoch 9.60 / 12):
+  learning_rate = 1.00e-01, training loss = 5.68e-03
+  validation accuracy: 100.00 (50 / 50), f1 (weighted): 100.00, loss: 1.41e+00
+  CPU time: 11s, wall time: 12s
+step 105 / 112 (epoch 11.20 / 12):
+  learning_rate = 1.00e-01, training loss = 2.04e-03
+  validation accuracy: 100.00 (50 / 50), f1 (weighted): 100.00, loss: 1.44e+00
+  CPU time: 12s, wall time: 13s
+step 112 / 112 (epoch 11.95 / 12):
+  learning_rate = 1.00e-01, training loss = 1.00e-03
+  validation accuracy: 100.00 (50 / 50), f1 (weighted): 100.00, loss: 1.44e+00
+  CPU time: 13s, wall time: 14s
+validation accuracy: best = 100.00, mean = 100.00
+```
 ## Jupyterhub service
 (This is still experimental and has no technical support)
 
