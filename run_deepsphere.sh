@@ -14,16 +14,16 @@ else
   echo "OS not known"
 fi
 
-current=$PWD
 # Setup DeepSphere package in local mode
-cd /scratch365/$(whoami)
+pushd /scratch365/$(whoami)
 if [ ! -d DeepSphere ]; then
        git clone https://github.com/NDCMS/DeepSphere/
 fi
+popd
 
 echo 
 echo "- Executing DeepSphere example"
-python3 deepSphere.py 2>&1
+python3 deepsphere.py 2>&1
 
 exitcode=$?
 exit $exitcode

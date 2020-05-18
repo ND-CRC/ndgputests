@@ -29,7 +29,7 @@ from tensorflow.python.client import device_lib
 
 print(device_lib.list_local_devices())
 
-data = np.load('data/maps_downsampled_64.npz')
+data = np.load('maps_downsampled_64.npz')
 assert(len(data['class1']) == len(data['class2']))
 nclass = len(data['class1'])
 

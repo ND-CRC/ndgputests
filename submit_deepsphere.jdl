@@ -1,12 +1,12 @@
 # Invoke Singularity
 #
 universe   = vanilla
-executable = tf_matmul.sh
+executable = run_deepsphere.sh
 
 should_transfer_files = Yes
 when_to_transfer_output = ON_EXIT
 
-transfer_input_files = deepsphere.py
+transfer_input_files = deepsphere.py, deepsphere_inputs/maps_downsampled_64.npz
 
 Log    = logs/$(Cluster).log
 Output = logs/$(Cluster)-$(Process).out
@@ -18,7 +18,7 @@ Error  = logs/$(Cluster)-$(Process).err
 ## NOVA image:
 #+SingularityImage = "/cvmfs/singularity.opensciencegrid.org/novaexperiment/el7-tensorflow-gpu:latest"
 ## Notre dame images
-+SingularityImage = "/cvmfs/singularity.opensciencegrid.org/notredamedulac/notredamedulac/el7-tensorflow-keras-gpu:latest"
++SingularityImage = "/cvmfs/singularity.opensciencegrid.org/notredamedulac/el7-deepshere-gpu:latest"
 
 request_gpus   = 1
 request_memory = 1 Gb
