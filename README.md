@@ -146,12 +146,10 @@ $ condor_submit submit_deepsphere.jdl
 
 Part of output example:
 ```
-2020-05-18 14:09:22.118759: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1325] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 21400 MB memory) -> physical GPU (device: 0, name: Quadro RTX 6000, pci bus id: 0000:2f:00.0, compute capability: 7.5)
-[name: "/device:CPU:0"
-device_type: "CPU"
-memory_limit: 268435456
-locality {
-}
+emory) -> physical GPU (device: 0, name: Quadro RTX 6000, pci bus id: 0000:2f:00.0, compute capability: 7.5)
+2020-05-18 14:09:22.115326: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1639] Found device 0 with properties:
+name: Quadro RTX 6000 major: 7 minor: 5 memoryClockRate(GHz): 1.62
+pciBusID: 0000:2f:00.0
 step 75 / 112 (epoch 8.00 / 12):
   learning_rate = 1.00e-01, training loss = 3.12e-03
   validation accuracy: 100.00 (50 / 50), f1 (weighted): 100.00, loss: 1.38e+00
