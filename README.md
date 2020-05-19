@@ -26,7 +26,7 @@ Error  = logs/$(Cluster)-$(Process).err
 # Input files
 # You can transfer files like this:
 should_transfer_files = Yes
-transfer_input_files = /afs/my/user/amber_inputs/input_file
+transfer_input_files = /some/path/input_file
 
 # But if you are using /scratch365 and all your input files are present there, all worker nodes will have read/write access to it, so you can just use the scratch365 paths instead without transferring the input files and set the following instead:
 should_transfer_files = IF_NEEDED
