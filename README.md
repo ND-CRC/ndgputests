@@ -233,5 +233,5 @@ https://camlnd.crc.nd.edu:9800/
 
 Please, refer to the [jupyter-notebook documentation](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Notebook%20Basics.html) for more information.
 
-Curated containers: Pytorch
-In development: Tensorflow/Keras, Amber
+Curated containers: Pytorch, TensorFlow/Keras, JAX
+In development: DeepSphere, Amber
