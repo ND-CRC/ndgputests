@@ -4,12 +4,12 @@
 
 In order to use CAML resources, we require defining singularity images on PATHs. E.g.: Via cvmfs.
 
-The following Notre Dame image (available via CVMFS) supports TensorFlow, Keras and PyTorch:
+For example, the following Notre Dame image (available via CVMFS) supports TensorFlow, Keras and PyTorch:
 
 ```
 /cvmfs/singularity.opensciencegrid.org/notredamedulac/el7-tensorflow-pytorch:latest
 ```
-is built from: https://github.com/NDCMS/el7-tensorflow-gpu
+and it is built from: https://github.com/NDCMS/el7-tensorflow-gpu
 
 ## Setting up this tutorial examples
 
@@ -20,7 +20,7 @@ cd /scratch365/$USER
 git clone https://github.com/khurtado/ndgputests
 cd ndgputests
 ```
-Then, follow one or both of the examples below.
+Then, follow one of the examples below.
 
 ### Tensorflow example
 
