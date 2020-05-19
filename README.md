@@ -11,6 +11,30 @@ For example, the following Notre Dame image (available via CVMFS) supports Tenso
 ```
 and it is built from: https://github.com/NDCMS/el7-tensorflow-gpu
 
+# HTCondor variables
+HTCondor needs a submission file, describing the resources needed, input files, log paths, container image location and executable to run. E.g.:
+
+```
+executable = yourexecutable.sh
+
+# Note if you use a subdirectory like logs, you need to create it beforehand
+# E.g.: mkdir logs
+Log    = logs/$(Cluster).log
+Output = logs/$(Cluster)-$(Process).out
+Error  = logs/$(Cluster)-$(Process).err
+
+# Singularity image, for amber for example, it would be:
+#+SingularityImage = "cvmfs/singularity.opensciencegrid.org/notredamedulac/amber:latest"
+
+# Number of GPUs, Cpus and Memory to use
+request_gpus   = 1
+request_memory = 1 Gb
+request_cpus   = 1
+
+# Number of jobs to submit
+Queue 1
+```
+
 ## Setting up the tutorial examples
 
 Once you log in into camlnd.crc.nd.edu, type: 
