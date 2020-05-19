@@ -1,6 +1,6 @@
 # CAML-ND GPU Tests
 
-## Condor Submission
+## HTCondor Submission
 
 In order to use CAML resources, we require defining singularity images on PATHs. E.g.: Via cvmfs.
 
@@ -11,7 +11,7 @@ For example, the following Notre Dame image (available via CVMFS) supports Tenso
 ```
 and it is built from: https://github.com/NDCMS/el7-tensorflow-gpu
 
-# HTCondor variables
+### HTCondor variables
 HTCondor needs a submission file, describing the resources needed, input files, log paths, container image location and executable to run. E.g.:
 
 ```
