@@ -11,7 +11,7 @@ For example, the following Notre Dame image (available via CVMFS) supports Tenso
 ```
 and it is built from: https://github.com/NDCMS/el7-tensorflow-gpu
 
-## Setting up this tutorial examples
+## Setting up the tutorial examples
 
 Once you log in into camlnd.crc.nd.edu, type: 
 
